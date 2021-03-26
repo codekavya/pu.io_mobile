@@ -9,7 +9,7 @@ void main() {
 //       theme: ThemeData(
 //         primarySwatch: Colors.blue,
 //       ),
-//       home: MyHomePage(title: 'pu.i mobile'),
+//       home: MyHomePage(title: 'pu.io mobile'),
 //     );
 
 class MyApp extends StatelessWidget {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         title: 'PU.IO MOBILE',
         home: MyHomePage(title: 'PU.IO MOBILE'),
         theme: ThemeData.dark().copyWith(
-          primaryColor: Color(0xFF6E012A),
+          primaryColor: Color(0xFFA51C30),
           scaffoldBackgroundColor: Color(0xFFE9E7E8),
         ));
   }
