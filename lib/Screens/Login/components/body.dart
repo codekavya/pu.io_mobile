@@ -58,11 +58,7 @@ class Body extends StatelessWidget {
                 builder: (context, snapshot) {
                   return RoundedButton(
                       text: "LOGIN",
-                      press: snapshot.hasData
-                          ? () {
-                              print('Login Successful!');
-                            }
-                          : null);
+                      press: snapshot.hasData ? bloc.submit : null);
                 }),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
