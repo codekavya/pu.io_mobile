@@ -22,6 +22,8 @@ class Body extends StatelessWidget {
             SizedBox(height: size.height * 0.05),
             Image.asset(
               "assets/images/pu_logo.png",
+              width: 300.0,
+              height: 90.0,
             ),
             SizedBox(height: size.height * 0.05),
             RoundedButton(

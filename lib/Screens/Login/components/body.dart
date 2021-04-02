@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:puio_mobile/Screens/Login/components/background.dart';
 import 'package:puio_mobile/Screens/Signup/signup_screen.dart';
+import 'package:puio_mobile/Screens/dashboard/dashboard.dart';
 import 'package:puio_mobile/components/already_have_an_account_acheck.dart';
 import 'package:puio_mobile/components/rounded_button.dart';
 import 'package:puio_mobile/components/rounded_input_field.dart';
@@ -8,6 +9,7 @@ import 'package:puio_mobile/components/rounded_password_field.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:puio_mobile/src/blocs/bloc.dart';
 import 'package:puio_mobile/src/blocs/provider.dart';
+import 'package:puio_mobile/screens/loading_screen.dart';
 
 class Body extends StatelessWidget {
   const Body({
@@ -53,12 +55,14 @@ class Body extends StatelessWidget {
                 );
               },
             ),
-            StreamBuilder<Object>(
-                stream: bloc.submitValid,
-                builder: (context, snapshot) {
-                  return RoundedButton(
-                      text: "LOGIN",
-                      press: snapshot.hasData ? bloc.submit : null);
+            RoundedButton(
+                text: "LOGIN",
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => Dashboard(bloc: bloc)),
+                  );
                 }),
             SizedBox(height: size.height * 0.03),
             AlreadyHaveAnAccountCheck(
