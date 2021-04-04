@@ -1,4 +1,5 @@
-import 'package:puio_mobile/Screens/Welcome/welcome_screen.dart';
+import 'package:puio_mobile/Screens/Login/flogin.dart';
+
 import 'package:flutter/material.dart';
 
 class LoadingScreen extends StatefulWidget {
@@ -19,7 +20,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
     Navigator.pushReplacement(
       context,
       MaterialPageRoute(builder: (context) {
-        return WelcomeScreen();
+        return LoginPage();
       }),
     );
   }

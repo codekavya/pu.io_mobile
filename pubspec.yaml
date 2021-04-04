@@ -21,6 +21,7 @@ dependencies:
 
   rxdart: ^0.26.0
   http: ^0.13.1
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:
