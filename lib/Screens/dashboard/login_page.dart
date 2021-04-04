@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:puio_mobile/Screens/dashboard/dashboard.dart';
 
-import 'fsignup.dart';
+import 'signup_page.dart';
 import 'package:puio_mobile/src/blocs/provider.dart';
 
 class LoginPage extends StatelessWidget {
@@ -180,7 +180,7 @@ class LoginPage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => NewUser()));
+                                    builder: (context) => SignUpPage()));
                           },
                           child: Text(
                             'Singn up',

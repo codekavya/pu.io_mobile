@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'flogin.dart';
+import 'login_page.dart';
 
-class NewUser extends StatefulWidget {
+class SignUpPage extends StatefulWidget {
   @override
   _NewUserState createState() => _NewUserState();
 }
 
-class _NewUserState extends State<NewUser> {
+class _NewUserState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
