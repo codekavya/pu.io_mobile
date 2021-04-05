@@ -7,17 +7,17 @@ import 'gridDashboard.dart';
 
 class Dashboard extends StatefulWidget {
   Dashboard({@required this.bloc});
-  final Bloc bloc;
+  final bloc;
 
   @override
   _DashboardState createState() => _DashboardState(this.bloc);
 }
 
 class _DashboardState extends State<Dashboard> {
-  _DashboardState(Bloc bloc) {
-    this._bloc = bloc;
+  _DashboardState(bloc) {
+    this.token = bloc;
   }
-  Bloc _bloc;
+  String _bloc;
   String token;
   Future noticesData;
   Future schoolsAndCollegesData;
@@ -25,7 +25,6 @@ class _DashboardState extends State<Dashboard> {
   Future facultiesData;
 
   getData() async {
-    token = await _bloc.submit();
     noticesData = NetworkHelper(noticesURL, token).getData();
     print(noticesData);
     programsData = NetworkHelper(noticesURL, token).getData();

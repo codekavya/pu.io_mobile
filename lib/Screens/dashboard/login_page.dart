@@ -131,11 +131,12 @@ class LoginPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: TextButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final token = await bloc.submit();
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => Dashboard(bloc: bloc)),
+                              builder: (context) => Dashboard(bloc: token)),
                         );
                       },
                       child: Row(
