@@ -3,8 +3,6 @@ import 'package:http/http.dart' as http;
 import 'validators.dart';
 import 'package:rxdart/rxdart.dart';
 import 'dart:convert';
-import 'package:flutter/material.dart';
-import 'package:puio_mobile/Screens/dashboard/dashboard.dart';
 
 const url = 'http://localhost:4000/login';
 

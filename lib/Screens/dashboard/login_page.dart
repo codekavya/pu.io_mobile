@@ -20,62 +20,59 @@ class LoginPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.bottomLeft,
-              colors: [Colors.blueGrey, Colors.lightBlueAccent]),
+              begin: Alignment.topRight, end: Alignment.bottomLeft,
+              // colors: [Colors.blueGrey, Colors.lightBlueAccent]
+              colors: [Color(0xff212431), Colors.black]),
         ),
         child: ListView(
           children: <Widget>[
             Column(
               children: <Widget>[
-                Row(children: <Widget>[
-                  // TextLogin(),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 30.0, left: 0.0),
-                    child: Container(
-                      height: 200,
-                      width: 200,
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            height: 60,
-                          ),
-                          Center(
-                            child: Text(
-                              'pu.io',
-                              style: TextStyle(
-                                fontSize: 30,
-                                color: Colors.white,
-                              ),
-                            ),
-                          )
-                        ],
-                      ),
+                // TextLogin(),
+                Padding(
+                  padding: const EdgeInsets.only(top: 30.0, left: 0.0),
+                  child: Container(
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          height: 100,
+                        ),
+                        Center(
+                            child: Image.asset(
+                          'assets/images/puio_logo.png',
+                          width: 70,
+                          height: 70,
+                        )),
+                      ],
                     ),
-                  )
-                ]),
+                  ),
+                ),
+
                 // InputEmail(),
                 Padding(
                   padding: const EdgeInsets.only(top: 50, left: 50, right: 50),
                   child: Container(
-                    height: 60,
+                    height: 80,
                     width: MediaQuery.of(context).size.width,
                     child: StreamBuilder<Object>(
                         stream: bloc.email,
                         builder: (context, snapshot) {
-                          return TextField(
+                          return TextFormField(
                             onChanged: bloc.changeEmail,
                             style: TextStyle(
                               color: Colors.white,
                             ),
                             decoration: InputDecoration(
+                              enabledBorder: UnderlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.white)),
                               errorText: snapshot.error,
                               border: InputBorder.none,
-                              fillColor: Colors.lightBlueAccent,
+                              fillColor: Colors.white,
                               labelText: 'Name',
                               labelStyle: TextStyle(
                                 color: Colors.white,
-                                fontSize: 20,
                               ),
                             ),
                           );
@@ -86,7 +83,7 @@ class LoginPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(top: 20, left: 50, right: 50),
                   child: Container(
-                    height: 60,
+                    height: 80,
                     width: MediaQuery.of(context).size.width,
                     child: StreamBuilder<Object>(
                         stream: bloc.password,
@@ -98,6 +95,9 @@ class LoginPage extends StatelessWidget {
                             ),
                             obscureText: true,
                             decoration: InputDecoration(
+                                enabledBorder: UnderlineInputBorder(
+                                    borderSide:
+                                        BorderSide(color: Colors.white)),
                                 errorText: snapshot.error,
                                 border: InputBorder.none,
                                 labelText: 'Password',
@@ -116,9 +116,9 @@ class LoginPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.blue[300],
+                          color: Color(0xff92111C),
                           blurRadius:
-                              10.0, // has the effect of softening the shadow
+                              5.0, // has the effect of softening the shadow
                           spreadRadius:
                               1.0, // has the effect of extending the shadow
                           offset: Offset(
@@ -145,14 +145,14 @@ class LoginPage extends StatelessWidget {
                           Text(
                             'OK',
                             style: TextStyle(
-                              color: Colors.lightBlueAccent,
+                              color: Color(0xff92111C),
                               fontSize: 14,
                               fontWeight: FontWeight.w700,
                             ),
                           ),
                           Icon(
                             Icons.arrow_forward,
-                            color: Colors.lightBlueAccent,
+                            color: Color(0xff92111C),
                           ),
                         ],
                       ),
@@ -165,8 +165,8 @@ class LoginPage extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 30, left: 30),
                   child: Container(
                     alignment: Alignment.topRight,
-                    //color: Colors.red,
-                    height: 20,
+                    // color: Colors.red,
+                    height: 40,
                     child: Row(
                       children: <Widget>[
                         Text(
@@ -184,7 +184,7 @@ class LoginPage extends StatelessWidget {
                                     builder: (context) => SignUpPage()));
                           },
                           child: Text(
-                            'Singn up',
+                            'Sign up',
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.white,

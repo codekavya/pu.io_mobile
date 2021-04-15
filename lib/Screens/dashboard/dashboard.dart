@@ -25,11 +25,11 @@ class _DashboardState extends State<Dashboard> {
   Future facultiesData;
 
   getData() async {
-    noticesData = NetworkHelper(noticesURL, token).getData();
+    noticesData = NetworkHelper(collegesURL, token: token).getData();
     print(noticesData);
-    programsData = NetworkHelper(noticesURL, token).getData();
-    facultiesData = NetworkHelper(noticesURL, token).getData();
-    schoolsAndCollegesData = NetworkHelper(noticesURL, token).getData();
+    // programsData = NetworkHelper(noticesURL, token: token).getData();
+    // facultiesData = NetworkHelper(noticesURL, token: token).getData();
+    // schoolsAndCollegesData = NetworkHelper(noticesURL, token: token).getData();
   }
 
   @override
