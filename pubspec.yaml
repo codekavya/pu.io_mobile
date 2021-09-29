@@ -23,7 +23,7 @@ dependencies:
   http: ^0.13.1
   google_fonts: ^2.0.0
   
-  dropdown_search: ^0.5.0
+  dropdown_search: ^1.0.0
   
 
 dev_dependencies:
